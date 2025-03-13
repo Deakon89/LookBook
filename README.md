@@ -2,7 +2,7 @@
 
 ![LookBook Logo](/LookBook.webp)
 
-LookBook è un'applicazione Java che permette di gestire un negozio di abbigliamento. Consente di visualizzare, acquistare e restituire capi di abbigliamento, oltre a gestire gli utenti e le vendite.
+LookBook è un'applicazione Java che simula una parte di gestione di un negozio di abbigliamento di seconda mano.
 
 ## 📌 Funzionalità
 
