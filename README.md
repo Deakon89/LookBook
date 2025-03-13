@@ -56,9 +56,19 @@ Dopo la compilazione, puoi eseguire il programma con il comando:
 ```sh
 java -jar target/lookbook-1.0.jar
 ```
+---
+🛠️ Comandi Principali
 
-Se il file `capi.csv` non viene trovato, assicurati che sia nella cartella `src/main/resources/`.
+Ecco i principali comandi disponibili nell'applicazione:
 
+| Comando |Descrizione            |
+|---------|-----------------------|
+| 1       |Visualizza tutti i capi|                        
+| 2       |Comprare un capo       |
+| 3       |Restituire un capo     |
+| 4       |Aggiungere un utente   |
+| 5       |Esportare i capi(.csv) |
+| 0       |uscire dall' App       |
 ---
 
 ## 📂 Struttura del Progetto
