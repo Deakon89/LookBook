@@ -13,9 +13,9 @@ public class App {
     private static VenditaDAO venditaDAO = new VenditaDAO();
 
     public static void main(String[] args) {
-        utenteDAO.loadUtenti("LookBook/src/main/java/com/lookbook/resources/utenti.csv");
-        capoDAO.loadCapi("LookBook/src/main/java/com/lookbook/resources/capi.csv");
-        venditaDAO.loadVendite("LookBook/src/main/java/com/lookbook/resources/vendite.csv");
+        utenteDAO.loadUtenti("/utenti.csv");
+        capoDAO.loadCapi("capi.csv");
+        venditaDAO.loadVendite("/vendite.csv");
         //load data
         capoDAO.getCapi();
         utenteDAO.getUtenti();

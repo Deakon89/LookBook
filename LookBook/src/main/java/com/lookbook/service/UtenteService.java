@@ -39,7 +39,7 @@ public class UtenteService {
     }
 
        private static void saveUtenteToFile(Utente utente) {
-        String filePath = "LookBook/src/main/java/com/lookbook/resources/utenti.csv"; 
+        String filePath = "LookBook/src/main/resources/utenti.csv"; 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { 
             String line = String.format("\n%d;%s;%s;%s;%s;%s\n",
                     utente.getId(),

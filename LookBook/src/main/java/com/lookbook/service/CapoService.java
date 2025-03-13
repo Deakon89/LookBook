@@ -29,7 +29,7 @@ public class CapoService {
     }
 
     public void saveVenditaToFile(Vendita vendita) {
-        String filePath = "LookBook/src/main/java/com/lookbook/resources/vendite.csv";
+        String filePath = "LookBook/src/main/resources/vendite.csv";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { 
         String line = String.format("%d;%d;%d\n",
                 vendita.getId(),
