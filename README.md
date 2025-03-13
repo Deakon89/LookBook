@@ -108,12 +108,6 @@ Se trovi un bug o vuoi suggerire una funzionalità, apri un **Issue** su GitHub 
 
 ---
 
-## 📜 Licenza
-
-Questo progetto è distribuito sotto la licenza MIT. Consulta il file `LICENSE` per maggiori dettagli.
-
----
-
 ## 📬 Contatti
 
 - **Email:** franck.devw@gmail.com
