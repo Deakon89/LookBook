@@ -29,8 +29,8 @@ public class CapoService {
     }
 
     public void saveVenditaToFile(Vendita vendita) {
-        String filePath = "LookBook/src/main/java/com/lookbook/resources/vendite.csv"; // Percorso del file CSV
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { // 'true' per appendere al file esistente
+        String filePath = "LookBook/src/main/java/com/lookbook/resources/vendite.csv";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { 
         String line = String.format("%d;%d;%d\n",
                 vendita.getId(),
                 vendita.getIdCapo(),
@@ -41,25 +41,23 @@ public class CapoService {
     }
 }
     
-
     public void purchaseCapo() {
          System.out.println("Inserisci l'ID del capo che vuoi acquistare:");
     int capoId = scanner.nextInt();
-    scanner.nextLine();  // Consuma la linea dopo l'input numerico
+    scanner.nextLine();  
     Capo capo = capoDAO.getCapi().stream()
             .filter(c -> c.getId() == capoId && c.getDisponibile().equals("SI"))
             .findFirst()
             .orElse(null);
-
+            
     if (capo != null) {
-        // Assumi che tu abbia un modo per ottenere l'ID dell'utente (e.g., sessione utente, input, ecc.)
         System.out.println("Inserisci il tuo ID utente:");
         int idUtente = scanner.nextInt();
-        scanner.nextLine();  // Consuma la linea dopo l'input numerico
+        scanner.nextLine();  
 
-        int newVenditaId = getProssimoIdVendita();  // Implementa questa logica come necessario
+        int newVenditaId = getProssimoIdVendita();  
                 Vendita nuovaVendita = new Vendita(newVenditaId, capoId, idUtente);
-                saveVenditaToFile(nuovaVendita);  // Salva la nuova vendita nel file CSV
+                saveVenditaToFile(nuovaVendita);  
         
                 capo.setDisponibile("NO");
                 System.out.println("Hai acquistato il capo: " + capo);
@@ -68,10 +66,10 @@ public class CapoService {
             }
         }
 
-        public int lastVenditaId = 0;  // Assumi che parta da 0 o lo inizializzi dal file/databse all'avvio dell'app
+        public int lastVenditaId = 0;  
 
         public int getProssimoIdVendita() {
-        return ++lastVenditaId;  // Incrementa e ritorna il nuovo ID
+        return ++lastVenditaId;  
     }
 
     public void returnCapo() {

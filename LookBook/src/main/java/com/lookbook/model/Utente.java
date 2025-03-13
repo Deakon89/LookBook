@@ -8,16 +8,6 @@ public class Utente {
     private String indirizzo;
     private String documentoID;
 
-    /**
-     * Costruisce un'istanza di Utente.
-     *
-     * @param id L'ID univoco dell'utente.
-     * @param nome Il nome dell'utente.
-     * @param cognome Il cognome dell'utente.
-     * @param dataDiNascita La data di nascita dell'utente.
-     * @param indirizzo L'indirizzo dell'utente.
-     * @param documentoID L'ID del documento dell'utente.
-     */
     public Utente(int id, String nome, String cognome, String dataDiNascita, String indirizzo, String documentoID) {
         if (id < 0) {
             throw new IllegalArgumentException("L'ID non può essere negativo.");

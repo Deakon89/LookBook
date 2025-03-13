@@ -34,18 +34,17 @@ public class UtenteService {
         utenteDAO.getUtenti().add(newUtente);
         System.out.println("Nuovo utente aggiunto: " + newUtente);
     
-        // Salva l'elenco aggiornato degli utenti nel file CSV
+
         saveUtenteToFile(newUtente);
     }
 
        private static void saveUtenteToFile(Utente utente) {
-        String filePath = "LookBook/src/main/java/com/lookbook/resources/utenti.csv"; // Percorso del tuo file CSV
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { // 'true' per appendere dati al file esistente
+        String filePath = "LookBook/src/main/java/com/lookbook/resources/utenti.csv"; 
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { 
             String line = String.format("\n%d;%s;%s;%s;%s;%s\n",
                     utente.getId(),
                     utente.getNome(),
                     utente.getCognome(),
-
                     utente.getDataDiNascita(),
                     utente.getIndirizzo(),
                     utente.getDocumentoId());

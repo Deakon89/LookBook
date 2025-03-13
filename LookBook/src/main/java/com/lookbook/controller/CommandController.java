@@ -28,7 +28,7 @@ public class CommandController {
 
             if(scanner.hasNextInt()){
                 int choice = scanner.nextInt();
-                scanner.nextLine(); // Consuma il newline
+                scanner.nextLine(); 
                 switch (choice) {
                     case 1:
                         capoService.displayAllCapi();
@@ -53,7 +53,7 @@ public class CommandController {
                 }
             } else {
                 System.out.println("Inserisci un numero valido.");
-                scanner.next(); // Consume the non-integer input
+                scanner.next(); 
             }
         }
         scanner.close();

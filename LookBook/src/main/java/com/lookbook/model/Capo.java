@@ -5,20 +5,9 @@ public class Capo {
     private String tipologia;
     private String marca;
     private String taglia;
-    private double prezzo; // Cambiato da String a double
-    private String disponibile; // Cambiato da 'Disponibile' a 'disponibile'
+    private double prezzo; 
+    private String disponibile; 
 
-    /**
-     * Costruisce un'istanza di un capo di abbigliamento.
-     *
-     * @param id L'ID univoco del capo.
-     * @param dataInserimento La data di inserimento del capo nel sistema.
-     * @param tipologia La tipologia del capo (es. pantaloni, maglietta).
-     * @param marca La marca del capo.
-     * @param taglia La taglia del capo.
-     * @param prezzo Il prezzo del capo.
-     * @param disponibile Stato della disponibilità del capo (es. "SI", "NO").
-     */
     public Capo(int id, String dataInserimento, String tipologia, String marca, String taglia, double prezzo, String disponibile) {
         if (id < 0) {
             throw new IllegalArgumentException("L'ID non può essere negativo.");
@@ -34,8 +23,6 @@ public class Capo {
         this.prezzo = prezzo;
         this.disponibile = disponibile;
     }
-
-    // Metodi getter rimangono invariati
 
     public int getId() {
         return id;
