@@ -38,10 +38,17 @@ public class UtenteService {
         saveUtenteToFile(newUtente);
     }
 
-       private static void saveUtenteToFile(Utente utente) {
-        String filePath = "LookBook/src/main/resources/utenti.csv"; 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { 
-            String line = String.format("\n%d;%s;%s;%s;%s;%s\n",
+    private static void saveUtenteToFile(Utente utente) {
+        String filePath = "utenti.csv"; 
+    
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+           
+            if (new java.io.File(filePath).length() == 0) {
+                writer.write("id;nome;cognome;dataDiNascita;indirizzo;documentoID\n");
+            }
+    
+            // Scrive l'utente nel file
+            String line = String.format("%d;%s;%s;%s;%s;%s\n",
                     utente.getId(),
                     utente.getNome(),
                     utente.getCognome(),
@@ -49,9 +56,13 @@ public class UtenteService {
                     utente.getIndirizzo(),
                     utente.getDocumentoId());
             writer.write(line);
+            System.out.println("Utente salvato in utenti.csv!");
         } catch (IOException e) {
             System.err.println("Errore nella scrittura del file CSV: " + e.getMessage());
         }
-    
     }
+    
 }
+    
+
+

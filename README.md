@@ -46,7 +46,7 @@ mvn package
 Il file verrà creato nella cartella `target/` con il nome:
 
 ```sh
-target/lookbook-1.0.jar
+target/lookbook-1.0-SNAPSHOT.jar
 ```
 
 ### 4️⃣ Esecuzione del Programma
@@ -54,7 +54,7 @@ target/lookbook-1.0.jar
 Dopo la compilazione, puoi eseguire il programma con il comando:
 
 ```sh
-java -jar target/lookbook-1.0.jar
+java -jar target/lookbook-1.0-SNAPSHOT.jar
 ```
 ---
 🛠️ Comandi Principali

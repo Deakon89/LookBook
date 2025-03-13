@@ -29,17 +29,24 @@ public class CapoService {
     }
 
     public void saveVenditaToFile(Vendita vendita) {
-        String filePath = "LookBook/src/main/resources/vendite.csv";
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { 
-        String line = String.format("%d;%d;%d\n",
-                vendita.getId(),
-                vendita.getIdCapo(),
-                vendita.getIdUtente());
-        writer.write(line);
-    } catch (IOException e) {
-        System.err.println("Errore nella scrittura del file CSV delle vendite: " + e.getMessage());
+        String filePath = "vendite.csv"; 
+    
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            
+            if (new java.io.File(filePath).length() == 0) {
+                writer.write("id_vendita;id_capo;id_utente\n");
+            }
+    
+            String line = String.format("%d;%d;%d\n",
+                    vendita.getId(),
+                    vendita.getIdCapo(),
+                    vendita.getIdUtente());
+            writer.write(line);
+            System.out.println("Vendita salvata in vendite.csv!");
+        } catch (IOException e) {
+            System.err.println("Errore nella scrittura del file CSV delle vendite: " + e.getMessage());
+        }
     }
-}
     
     public void purchaseCapo() {
          System.out.println("Inserisci l'ID del capo che vuoi acquistare:");
