@@ -67,17 +67,16 @@ Se il file `capi.csv` non viene trovato, assicurati che sia nella cartella `src/
 lookbook/
 ├── src/
 │   ├── main/
-│   │   ├── java/com/lookbook/
-│   │   │   ├── App.java       # Classe principale
-│   │   │   ├── dao/           # Gestione database
-│   │   │   ├── models/        # Modelli di dati
-│   │   │   ├── utils/         # Utility
-│   │   ├── resources/
-│   │       ├── capi.csv       # Dati dei capi di abbigliamento
-│   ├── test/
-│       ├── java/com/lookbook/ # Test unitari
-├── pom.xml                     # Configurazione Maven
-├── README.md                   # Documentazione
+│      ├── java/com/lookbook/
+│      │   ├── App.java       # Classe principale
+│      │   ├── dao/           # Gestione dati
+│      │   ├── models/        # Modelli di dati
+│      │   ├── utils/         # Utility
+│      ├── resources/
+│          ├── capi.csv       # Dati dei capi di abbigliamento
+|
+├── pom.xml                   # Configurazione Maven
+├── README.md                 # Documentazione
 ```
 
 ---
